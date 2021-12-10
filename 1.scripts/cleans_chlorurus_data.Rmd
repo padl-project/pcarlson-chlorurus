@@ -1,0 +1,82 @@
+---
+title: "Cleaning Chlorurs Data"
+author: "Camila Vargas"
+date: "12/10/2021"
+output: html_document
+---
+
+This scripts cleans data provided by Peter Carlson on fish surveys for Chlorurus.
+
+## Set up
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+## Load packages
+library(here)
+library(tidyverse)
+library(janitor)
+library(readxl)
+
+## Sets R not to use scientific notations
+options(scipen=999) 
+
+raw_data_path <- here::here("6.raw_data/")
+```
+
+
+## Read data
+
+```{r}
+chlo_activity_raw <- read_csv(here::here(paste0(raw_data_path, "Chlorurus_Activity_data.csv"))) %>% 
+  clean_names()
+
+
+chlo_area_raw <- read_csv(here::here(paste0(raw_data_path, "Chlorurus_Area_data.csv"))) %>% 
+  clean_names()
+
+
+fish_meta_raw <- read_csv(here::here(paste0(raw_data_path, "Fish_Metadata.csv"))) %>% 
+  clean_names()
+
+```
+
+- Activity look up is the metadata for the categorical variables under the Activity column.
+- Fish metadata is
+
+## Renaming columsn
+Removing unites from columns name
+
+```{r}
+chlo_activity <- chlo_activity_raw %>% 
+  rename(focal_dur = focal_dur_mins,
+         act_dur = act_dur_mins) %>% 
+  mutate(observer = str_to_title(observer))
+
+chlo_area <- chlo_area_raw %>% 
+  rename(twohr_area = twohr_area_meters_sq,
+         twohr_length = twohr_length_meters,
+         feeding_area = feeding_area_meters_sq,
+         feeding_length = feeding_length_meters)
+
+fish_meta <- fish_meta_raw %>% 
+  rename(total_length = total_length_cm)
+
+```
+
+
+## Save Clean Data
+
+```{r}
+write_csv(chlo_activity, here::here("7.clean_data/Chlorurus_Activity_Palmyra_2014.csv"))
+
+write_csv(chlo_area, here::here("7.clean_data/Chlorurus_Area_Palmyra_2014.csv"))
+
+write_csv(fish_meta, here::here("7.clean_data/Fish_Information_Chlorurus_Data_2014.csv"))
+
+```
+
+
+
+
+

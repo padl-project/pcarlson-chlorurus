@@ -1,0 +1,9 @@
+attributeName	attributeDefinition	class	unit	dateTimeFormatString	missingValueCode	missingValueCodeExplanation
+site		categorical				
+track_id		character				
+fish_id		categorical				
+species		character				
+twohr_area		numeric	!Add units here!			
+twohr_length		numeric	!Add units here!			
+feeding_area		numeric	!Add units here!			
+feeding_length		numeric	!Add units here!			

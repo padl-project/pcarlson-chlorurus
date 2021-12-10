@@ -19,7 +19,7 @@ Data
 ```{r}
 
 ## Finalized data folder url
-final_files_url <- " "
+final_files_url <- "https://drive.google.com/drive/folders/1THmtjO3Nwv1b-pPk4LEevV3a8kldLgyA"
 
 ## Upload data 
 ## One file
@@ -59,7 +59,7 @@ Metadata Doc
 
 drive_upload(media = here::here("2.metadata_doc/metadata_doc.docx"),
              path = as_id(final_files_url),
-             name = "FILE NAME_metadata.docx",
+             name = "Carlson_Chlorurs_metadata.docx",
              type = "docx")
 ```
 

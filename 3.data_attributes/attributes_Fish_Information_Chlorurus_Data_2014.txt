@@ -1,0 +1,6 @@
+attributeName	attributeDefinition	class	unit	dateTimeFormatString	missingValueCode	missingValueCodeExplanation
+fish_id		character				
+species		categorical				
+site		categorical				
+phase		categorical				
+total_length		numeric	!Add units here!			

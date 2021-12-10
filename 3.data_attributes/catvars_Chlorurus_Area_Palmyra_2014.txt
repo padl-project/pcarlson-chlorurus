@@ -1,0 +1,13 @@
+attributeName	code	definition
+fish_id	BB	
+fish_id	DJ	
+fish_id	GP	
+fish_id	JT	
+fish_id	MP	
+fish_id	NL	
+fish_id	RB	
+fish_id	RD	
+fish_id	RH	
+fish_id	SB	
+site	PenguinSpit	
+site	WesternTerrace	

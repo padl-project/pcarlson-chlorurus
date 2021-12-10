@@ -1,0 +1,14 @@
+attributeName	attributeDefinition	class	unit	dateTimeFormatString	missingValueCode	missingValueCodeExplanation
+date		Date		!Add datetime specifier here!		
+observer		character				
+site		character				
+species		character				
+fish_id		categorical				
+focal_start		Date		!Add datetime specifier here!		
+focal_end		Date		!Add datetime specifier here!		
+focal_dur		numeric	!Add units here!			
+activity		categorical				
+act_start		Date		!Add datetime specifier here!		
+act_end		Date		!Add datetime specifier here!		
+act_dur_mins		numeric	!Add units here!			
+track_id		character				

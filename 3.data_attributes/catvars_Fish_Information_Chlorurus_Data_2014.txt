@@ -1,0 +1,6 @@
+attributeName	code	definition
+phase	TP	
+site	PENGUINSPIT	
+site	WESTERNTERRACE	
+species	CH.MICRO	
+species	CH.SORD	

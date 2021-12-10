@@ -1,7 +1,7 @@
 ---
-title: "ADD TILE"
-author: "ADD AUTHOR"
-date: "ADD DATE"
+title: "Chlorurus Data"
+author: "Peter Carlson"
+date: "12/10/2021"
 output: word_document
 ---
 
@@ -27,8 +27,9 @@ The information in this document will be used to create the EML of the data pack
 
 ## 2. Dataset Title
 <!--_Include what, where, and when in the dataset title_-->
- - 
- - 
+ - Chlorurs Activity Palmyra 2014
+ - Chlorurus Area Palmyra 2014
+ - Fish Information Chlorurs Data
  
 
 ## 3. Abstract
@@ -46,11 +47,11 @@ _These are the people who will show up as authors in the dataset citation. These
 
 ```{r, creator table, echo = FALSE, message= FALSE, warning= FALSE}
 
-first_name <- c("", "")
+first_name <- c("Peter", "")
 middle_in <- c("", "")
-last_name <- c(" ", " ")
-organization <- c("", "")
-email <- c("", "")
+last_name <- c("Carlson", " ")
+organization <- c("University of California Santa Barbara", "")
+email <- c("peter.carlson@ucsb.edu", "")
 orcid <- c("", "")
 
 creator_colname <- c("First Name", "Middle Initial", "Last Name", "Organization", "email address", "ORCID ID")
@@ -87,11 +88,11 @@ _You may also list other personnel who participated in the project (such as fiel
 
 ```{r, personnel table, echo = FALSE, message= FALSE, warning= FALSE}
 
-p_first_name <- c("", "Camila")
+p_first_name <- c("Peter", "Camila")
 p_middle_in <- c("", "")
-p_last_name <- c(" ", "Vargas Poulsen")
-p_organization <- c(" ", "PADL Data Manager, University of California Santa Barbara")
-p_email <- c("", "camilavargas@ucsb.edu")
+p_last_name <- c("Carlson", "Vargas Poulsen")
+p_organization <- c("University of California Santa Barbara", "PADL Data Manager, University of California Santa Barbara")
+p_email <- c("peter.carlson@ucsb.edu", "camilavargas@ucsb.edu")
 p_orcid <- c("", "")
 p_role <- c("contact", "associated party")
 
@@ -117,8 +118,6 @@ _**Please highlight** the license for the release of your data. Click on the lic
 
 [CCO](https://creativecommons.org/publicdomain/zero/1.0/)
 
-**Default**
-
 Public Domain Dedication, aka “No Rights Reserved.” This one means, “If I hold copyright in this, I waive it. And if we’re dealing with a country where we can’t waive copyright, here’s a broad public license with no attribution requirement. And just as a backup, I also promise not to sue you for copyright or related stuff if you use this.”
 
 **Message for user:** Please keep the dataset creators informed of any plans to use the dataset. Consultation with the original investigators is strongly encouraged. Publications and data products that make use of the dataset should include proper acknowledgement.
@@ -135,6 +134,8 @@ Attribution is required. CC licenses require that those who reuse a work provide
 _Using keywords from a controlled vocabulary (CV) will improve your data's future discovery and reuse.  The LTER CV is a good source for keywords. Access the [LTER CV here](https://vocab.lternet.edu/vocab/vocab/index.php).  Also, please determine one or two keywords that best describe your lab, station, and/or project (e.g., Trout Lake Station, NTL LTER).). Add as many rows to this table as needed_
 
 - Palmyra Atoll
+- Chlorurus
+- 
 
 
 
@@ -179,7 +180,7 @@ flextable::flextable(funding_table) %>%
 
 Information <- c("Begin date", "End date", "Is data collection ongoing or completed?")
 
-Description <- c(" ", "", "Completed")
+Description <- c("2014", "2014", "Completed")
 
 timeframe_table <- tibble(Information, Description)
 
@@ -318,13 +319,13 @@ files_names <- tibble(
 
 ## Creating the attribute .txt
 
-for (i in files_names$file_name){
-
-  EMLassemblyline::template_table_attributes(
-  path = path_templates,
-  data.path = path_data,
-  data.table = paste0(i, ".csv"))
-}
+# for (i in files_names$file_name){
+# 
+#   EMLassemblyline::template_table_attributes(
+#   path = path_templates,
+#   data.path = path_data,
+#   data.table = paste0(i, ".csv"))
+# }
 
 ## reading text into a data frame
 
@@ -354,13 +355,23 @@ flextable::flextable(data_attributes1) %>%
 
 ```
 
-
+<br>
 ```{r, attribute table 2, echo=FALSE, message= FALSE, warning= FALSE}
 
 flextable::flextable(data_attributes2) %>% 
   width(width = 1)
 
 ```
+
+<br>
+
+```{r, attribute table 3, echo=FALSE, message= FALSE, warning= FALSE}
+
+flextable::flextable(data_attributes3) %>% 
+  width(width = 1)
+
+```
+
 
 ## 14. Attributes code
 
@@ -370,105 +381,70 @@ _If you use codes in your column, please define each code in the following table
 
 ```{r, attribute code, echo = FALSE, message= FALSE, warning= FALSE}
 
-## Note: there can only be one file with he prefix attribute_ in the data attribute folder.
-EMLassemblyline::template_categorical_variables(
-  path = path_templates,
-  data.path = path_data)
 
-# **UPDATE NAMES**
+## Attributes list of Files
+attributes_names <- tibble(
+  list.files(path_templates, pattern = "attributes_")) %>% 
+  rename(file_name = 1) %>% 
+  mutate(file_name = str_remove(file_name, ".txt"),
+         catvar_name = paste0("catvar", 1:n()),
+         position = 1:n())
 
-cat_vars <- read.delim2(here::here(paste0("3.data_attributes/catvars_", file1_name,".txt")))
+## Create catvars file
+
+# for (i in attributes_names$file_name){
+# 
+#   EMLassemblyline::template_categorical_variables(
+#   path = path_templates,
+#   data.path = path_data)
+# }
+
+##General function
+read_catvar <- function(test){
+  
+  read.delim2(here::here(paste0("3.data_attributes/catvars_", test, ".txt")))
+}
+
+## Loop to read and name each file 
+for (i in attributes_names$position){
+  
+  assign(attributes_names$catvar_name[i], read_catvar(files_names$file_name[i]))
+
+  }
+
 
 ```
 
 
-```{r, categorical variables table, echo=FALSE, message= FALSE, warning= FALSE}
+```{r, categorical variables table 1, echo=FALSE, message= FALSE, warning= FALSE}
 
-flextable::flextable(cat_vars) %>%
+flextable::flextable(catvar1) %>%
+  autofit(add_w = 0.2, add_h = 0.1, part = c("body", "header"), unit = "in")
+  
+
+```
+
+<br>
+
+```{r, categorical variables table 2, echo=FALSE, message= FALSE, warning= FALSE}
+
+flextable::flextable(catvar2) %>%
   autofit(add_w = 0.2, add_h = 0.1, part = c("body", "header"), unit = "in")
   
 
 ```
 
 
+<br>
 
-<!-- ### Spatial data objects
+```{r, categorical variables table 3, echo=FALSE, message= FALSE, warning= FALSE}
 
-(List any geospatial data objects you would like to archive. Organize spatial data into .zip directories
-and describe each.)
-Directory name: (A short name for the data)
-Directory description: (A brief description of the data)
-
-Horizontal Coordinate System Name (e.g. WGS_1984_UTM_Zone_12N)
-Horizontal Accuracy Report
-Vertical Accuracy Report
-Cell Size X Direction
-Cell Size Y Direction
-Raster Origin (e.g. Upper Left)
-Number of Rows
-Number of Columns
-Number of Verticals
-Cell Geometry (e.g. pixel) -->
-
-
-## 15. Scripts/code (software)
-
-_List any software scripts/code you would like to archive along with your data. These may include processing scripts you wrote to create, clean, or analyze the data._
-
-
-```{r, script info, echo = FALSE, message= FALSE, warning= FALSE}
-
-file_name <- " "
-description <- " "
-language <- " "
-
-
-script_info_colnames <- c("Filename", "Description", "Scripting language")
-
-
-script_info <- tibble(file_name, description, language)
-
-colnames(script_info) <- script_info_colnames
-
-```
-
-
-```{r, script info export, echo=FALSE, message= FALSE, warning= FALSE}
-
-flextable::flextable(script_info) %>% 
+flextable::flextable(catvar3) %>%
   autofit(add_w = 0.2, add_h = 0.1, part = c("body", "header"), unit = "in")
-```
-
-
-
-
-## 16. Other objects (misc.)
-_List any other objects (e.g., .zip, .pdf, etc.) you would like to archive._
-
-**Note:** At the moment, we are not including any photographic data.
-
-
-```{r, other objects, echo = FALSE, message= FALSE, warning= FALSE}
-
-misc_file_name <- " "
-misc_description <- " "
-misc_data_type <- " "
-
-
-other_obj_colnames <- c("Filename", "Description", "Data type")
-
-other_objects <- tibble(misc_file_name, misc_description, misc_data_type)
-
-colnames(other_objects) <- other_obj_colnames
+  
 
 ```
 
-
-```{r, other objects export, echo=FALSE, message= FALSE, warning= FALSE}
-
-flextable::flextable(other_objects) %>% 
-  autofit(add_w = 0.2, add_h = 0.1, part = c("body", "header"), unit = "in")
-```
 
 
 ## 17. Articles
