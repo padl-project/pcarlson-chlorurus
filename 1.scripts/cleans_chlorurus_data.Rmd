@@ -42,7 +42,7 @@ fish_meta_raw <- read_csv(here::here(paste0(raw_data_path, "Fish_Metadata.csv"))
 ```
 
 - Activity look up is the metadata for the categorical variables under the Activity column.
-- Fish metadata is
+- Fish metadata is the look-up table with all the information of each fish id
 
 ## Renaming columsn
 Removing unites from columns name
@@ -54,13 +54,10 @@ chlo_activity <- chlo_activity_raw %>%
   mutate(observer = str_to_title(observer))
 
 chlo_area <- chlo_area_raw %>% 
-  rename(twohr_area = twohr_area_meters_sq,
-         twohr_length = twohr_length_meters,
-         feeding_area = feeding_area_meters_sq,
-         feeding_length = feeding_length_meters)
+  rename(kud95_area = x95kud_area,
+         kud95_feeding_area = x95kud_feeding_area)
 
-fish_meta <- fish_meta_raw %>% 
-  rename(total_length = total_length_cm)
+fish_meta <- fish_meta_raw
 
 ```
 
