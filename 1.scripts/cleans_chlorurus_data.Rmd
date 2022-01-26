@@ -17,6 +17,8 @@ library(here)
 library(tidyverse)
 library(janitor)
 library(readxl)
+library(lubridate)
+library(freeR)
 
 ## Sets R not to use scientific notations
 options(scipen=999) 
@@ -51,13 +53,52 @@ Removing unites from columns name
 chlo_activity <- chlo_activity_raw %>% 
   rename(focal_dur = focal_dur_mins,
          act_dur = act_dur_mins) %>% 
-  mutate(observer = str_to_title(observer))
+  mutate(observer = str_to_title(observer),
+         date = mdy(date),
+         focal_start = mdy_hm(focal_start),
+         focal_end = mdy_hm(focal_end),
+         act_start = mdy_hm(act_start),
+         act_end = mdy_hm(act_end))
 
 chlo_area <- chlo_area_raw %>% 
   rename(kud95_area = x95kud_area,
          kud95_feeding_area = x95kud_feeding_area)
 
 fish_meta <- fish_meta_raw
+
+```
+
+## QA/QC
+
+```{r}
+## Activity
+str(chlo_activity)
+
+unique(chlo_activity$observer)
+unique(chlo_activity$site)
+unique(chlo_activity$species)
+unique(chlo_activity$fish_id)
+unique(chlo_activity$activity)
+unique(chlo_activity$track_id)
+
+complete(chlo_activity)
+
+## Area
+str(chlo_area)
+
+unique(chlo_area$site)
+unique(chlo_area$track_id)
+unique(chlo_area$fish_id)
+unique(chlo_area$species)
+
+## fish metadata
+str(fish_meta)
+
+unique(fish_meta$fish_id)
+unique(fish_meta$species)
+unique(fish_meta$species_full_name)
+unique(fish_meta$site)
+unique(fish_meta$phase)
 
 ```
 
