@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2" packageId="edi.856.2" xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd" system="edi">
+  <access authSystem="https://pasta.edirepository.org/authentication" order="allowFirst" scope="document">
+    <allow>
+      <principal>uid=palmyra_project,o=EDI,dc=edirepository,dc=org</principal>
+      <permission>all</permission>
+    </allow>
+    <allow>
+      <principal>public</principal>
+      <permission>read</permission>
+    </allow>
+  </access>
+  <dataset>
+    <title>Activity budgets and space use for two common Pacific parrotfish (Chlorurus Sp.)  at Palmyra Atoll National Wildlife Refuge</title>
+    <creator>
+      <individualName>
+        <givenName>Peter</givenName>
+        <surName>Carlson</surName>
+      </individualName>
+      <organizationName>University of California Santa Barbara</organizationName>
+      <electronicMailAddress>peter.carlson@ucsb.edu</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0003-2893-2507</userId>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Jennifer</givenName>
+        <givenName>E</givenName>
+        <surName>Caselle</surName>
+      </individualName>
+      <organizationName>University of California Santa Barbara</organizationName>
+      <electronicMailAddress>caselle@ucsb.edu</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-1364-3123</userId>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Katie</givenName>
+        <surName>Koehn</surName>
+      </individualName>
+      <organizationName>University of California Santa Barbara</organizationName>
+      <electronicMailAddress>katiedavis7@gmail.com</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0003-1025-9051</userId>
+    </creator>
+    <associatedParty>
+      <individualName>
+        <givenName>Camila</givenName>
+        <surName>Vargas Poulsen</surName>
+      </individualName>
+      <organizationName>PADL Data Manager, Univerity of California Santa Barbara</organizationName>
+      <electronicMailAddress>camilavargas@ucsb.edu</electronicMailAddress>
+      <role>PADL Data Manager</role>
+    </associatedParty>
+    <pubDate>2022-01-26</pubDate>
+    <abstract>
+      <para>
+    Data was collected at Palmyra Atoll National Wildlife Refuge located
+    in the Central Pacific in 2014, and the work  focuses on two species
+    of Parrotfish, <emphasis>Chlorurus microrhinos</emphasis> and
+    <emphasis>Chlorurus spilurus</emphasis> (formerly
+    <emphasis>Cholrurus sordidus</emphasis>). For C. microrhinos, the
+    project was designed to collect fine-scale spatial behavior data,
+    focusing on territory size, species interactions, and benthic impact
+    (i.e. feeding behavior). Focal follow data was collected by one or
+    two observer(s), either on snorkel or SCUBA, and recording focal
+    activity down to the second. Simultaneously, the observer would be
+    towing a GPS that was recording a location every 5 seconds and each
+    location was then associated with a particular behavior.  Throughout
+    this study individual fish were identifiable and successive follows
+    were possible on individuals. For <emphasis>C. spilurus</emphasis>
+    the focus of the project was to collect behavioral time budget data
+    on feeding, territorial defense, and spawning behavior. 
+  </para>
+      <para>
+    The ‘Chlorurus_Area_Palmyra_2014.csv’ data only covers <emphasis>C.
+    Microrhinos</emphasis> and gives the 95% KUD area estimation for GPS
+    towed tracks, as well as the 95% KUD area for locations where
+    feeding was occurring. We also report the step length between
+    successive points for the entire follow as well as where feeding was
+    occurring.  
+  </para>
+      <para>
+    The ‘Chlorurus_Activity_Palmyra_2014.csv’ is for both <emphasis>C.
+    Microrhinos</emphasis> and <emphasis>C. spilurus</emphasis> and
+    reports the start and stop time of each focal follow as well as the
+    start and stop time of each activity.  Activity descriptions can be
+    found in the metadata and the total length and phase for each
+    individual in our study can be found in
+    ‘Fish_Information_Chlorurus_Data_2014.csv.
+  </para>
+    </abstract>
+    <keywordSet>
+      <keyword>Palmyra Atoll</keyword>
+      <keyword>Chlorurus Microrhinos </keyword>
+      <keyword>Chlorurus spilurus </keyword>
+      <keyword>95% KUD</keyword>
+      <keywordThesaurus>none</keywordThesaurus>
+    </keywordSet>
+    <intellectualRights>
+      <para>This information is released under the Creative Commons license - Attribution - CC BY (https://creativecommons.org/licenses/by/4.0/). The consumer of these data ("Data User" herein) is required to cite it appropriately in any publication that results from its use. The Data User should realize that these data may be actively used by others for ongoing research and that coordination may be necessary to prevent duplicate publication. The Data User is urged to contact the authors of these data if any questions about methodology or results occur. Where appropriate, the Data User is encouraged to consider collaboration or co-authorship with the authors. The Data User should realize that misinterpretation of data may occur if used out of context of the original study. While substantial efforts are made to ensure the accuracy of data and associated documentation, complete accuracy of data sets cannot be guaranteed. All data are made available "as is." The Data User should be aware, however, that data are updated periodically and it is the responsibility of the Data User to check for new versions of the data. The data authors and the repository where these data were obtained shall not be liable for damages resulting from any use or misinterpretation of the data. Thank you.
+</para>
+    </intellectualRights>
+    <coverage>
+      <geographicCoverage>
+        <geographicDescription>Palmyra Atoll National Wildlife Refuge</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-162.083</westBoundingCoordinate>
+          <eastBoundingCoordinate>-162.043</eastBoundingCoordinate>
+          <northBoundingCoordinate>5.88333</northBoundingCoordinate>
+          <southBoundingCoordinate>5.871</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <temporalCoverage>
+        <rangeOfDates>
+          <beginDate>
+            <calendarDate>2014-07-06</calendarDate>
+          </beginDate>
+          <endDate>
+            <calendarDate>2014-08-27</calendarDate>
+          </endDate>
+        </rangeOfDates>
+      </temporalCoverage>
+    </coverage>
+    <maintenance>
+      <description>completed</description>
+    </maintenance>
+    <contact>
+      <individualName>
+        <givenName>Peter</givenName>
+        <surName>Carlson</surName>
+      </individualName>
+      <organizationName>University of California Santa Barbara</organizationName>
+      <electronicMailAddress>peter.carlson@ucsb.edu</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0003-2893-2507</userId>
+    </contact>
+    <methods>
+      <methodStep>
+        <description>
+          <para>
+    Focal follow data was collected at two locations at Palmyra Atoll
+    National Wildlife Refuge, Penguin Spit and Western Terrace.
+    Individual fish were identified by unique markings on the face,
+    tail, and body as well as missing scales or scars.  A diver would
+    identify an individual fish and follow the fish for 2-3mins before
+    stating the focal follow. The diver would tow a GPS that was
+    recording a position every 5 secs and synchronized the time on their
+    wrist watch to the GPS time.  The diver would then follow the fish
+    and record the start and stop time of each activity, while also
+    following the path of the fish.  GPS tracks were downloaded and each
+    position was associated with an activity and activity summaries were
+    calculated.  For <emphasis>C. Microrhinos</emphasis> we calculated
+    the 95% kernel utilization distributions (KUD) for the entire focal
+    follow as well as for only the locations categorized as ‘feeding’. 
+    All KUD estimates were done in R with the adehabitatHR package. 
+  </para>
+        </description>
+      </methodStep>
+    </methods>
+    <dataTable>
+      <entityName>Chlorurus Activity Palmyra 2014</entityName>
+      <entityDescription>Reports the start and stop time of each focal follow as well as the start and stop time of each activity for C. Microrhinos and C. spilurus</entityDescription>
+      <physical>
+        <objectName>Chlorurus_Activity_Palmyra_2014.csv</objectName>
+        <size unit="bytes">1117685</size>
+        <authentication method="MD5">710827a0d56df16fa76be5121a952899</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+              <quoteCharacter>"</quoteCharacter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>date</attributeName>
+          <attributeDefinition>Date which the focal follow occured</attributeDefinition>
+          <storageType>date</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DD</formatString>
+              <dateTimeDomain/>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>observer</attributeName>
+          <attributeDefinition>Name of observer </attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Name of observer </definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>site</attributeName>
+          <attributeDefinition>Location at which the focal occured</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Location at which the focal occured</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>species</attributeName>
+          <attributeDefinition>Species code,  first two letters of the genus name and first five letters of the species name</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>CH.MICRO</code>
+                    <definition>Chlorurus Michrorhinos</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>CH.SPIL</code>
+                    <definition>Chlorurus spilurus</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>fish_id</attributeName>
+          <attributeDefinition>Unique, two letter, ID code to identify individual fish. See Fish Information file for details.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Unique, two letter, ID code to identify individual fish. See Fish Information file for details.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>focal_start</attributeName>
+          <attributeDefinition>Start time of focal follow</attributeDefinition>
+          <storageType>date</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DD hh:mm:ss</formatString>
+              <dateTimeDomain/>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>focal_end</attributeName>
+          <attributeDefinition>End time of focal follow</attributeDefinition>
+          <storageType>date</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DD hh:mm:ss</formatString>
+              <dateTimeDomain/>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>focal_dur</attributeName>
+          <attributeDefinition>Length on focal follow</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>minutes</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">7</minimum>
+                  <maximum exclusive="false">130.58</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>activity</attributeName>
+          <attributeDefinition>Activity code </attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>CL</code>
+                    <definition>Cleaning: Fish visits a cleaning station</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>DD</code>
+                    <definition>Dominance Display: Usually observed as a Terminal phase individual posturing towards an initial or transitional phase conspecific with flared out pectoral fins or tail flicking.</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>E</code>
+                    <definition>Eating: Fish are actively grazing the substrate, with their head oriented towards the benthos.</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>L</code>
+                    <definition>Lost: Fish was lost by the observer during this portion of the focal follow. Fish are either relocated or the focal follow is terminated.</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>OS</code>
+                    <definition>Offshore Movement: Fish swims in a directed fashion offshore and could not be followed by the observer</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>P</code>
+                    <definition>Pooping: Fish are actively pooping and depositing sediment on the benthos</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>P/CL</code>
+                    <definition>Pooping/Cleaning: Combination of these two activities, see specific descriptions</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>S</code>
+                    <definition>Spawning: Spawning event, with at least two individuals circling one and other, then quickly swimming up in the water column belly to belly. A cloud of gametes and sperm is usually observed.</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>TD</code>
+                    <definition>Territorial Defense: Fish swimming aggressively towards conspecifics and/or other species. Additionally, fish can posture along territory boundaries, with two fish swimming parallel to one another in the water column.</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>TD/P</code>
+                    <definition>Combination of these two activities, see specific descriptions</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>act_start</attributeName>
+          <attributeDefinition>Start time of activity </attributeDefinition>
+          <storageType>date</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DD hh:mm:ss</formatString>
+              <dateTimeDomain/>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>act_end</attributeName>
+          <attributeDefinition>End time of activity</attributeDefinition>
+          <storageType>date</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DD hh:mm:ss</formatString>
+              <dateTimeDomain/>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>act_dur</attributeName>
+          <attributeDefinition>Length of activity </attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>minutes</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">-1340</minimum>
+                  <maximum exclusive="false">301.917</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>track_id</attributeName>
+          <attributeDefinition>Unique ID for a focal follow to match activity data with area calculations</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Unique ID for a focal follow to match activity data with area calculations</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+      <numberOfRecords>7676</numberOfRecords>
+    </dataTable>
+    <dataTable>
+      <entityName>Chlorurus Area Palmyra 2014</entityName>
+      <entityDescription>Covers C. Microrhinos and gives the 95% KUD area estimation for GPS towed tracks, as well as the 95% KUD area for locations where feeding was occurring</entityDescription>
+      <physical>
+        <objectName>Chlorurus_Area_Palmyra_2014.csv</objectName>
+        <size unit="bytes">4575</size>
+        <authentication method="MD5">a61799ebc581aac75e443d9c00925337</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+              <quoteCharacter>"</quoteCharacter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>site</attributeName>
+          <attributeDefinition>Location at which focal follow occured</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Location at which focal follow occured</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>track_id</attributeName>
+          <attributeDefinition>Unique ID for a focal follow to match area calculations with activity data</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Unique ID for a focal follow to match area calculations with activity data</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>fish_id</attributeName>
+          <attributeDefinition>Unique, two letter, ID code to identify individual fish. See Fish Information file for details.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Unique, two letter, ID code to identify individual fish. See Fish Information file for details.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>species</attributeName>
+          <attributeDefinition>Species code,  first two letters of the genus name and first five letters of the species name</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>CH.MICRO</code>
+                    <definition>Chlorurus Michrorhinos</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>kud95_area</attributeName>
+          <attributeDefinition>95% KUD area estimation </attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>meter squares</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">31.82639021</minimum>
+                  <maximum exclusive="false">2220.25698</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>pathway_length</attributeName>
+          <attributeDefinition>Total pathway length of  successive points</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>meters</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">28.88602672</minimum>
+                  <maximum exclusive="false">498.0823535</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>kud95_feeding_area</attributeName>
+          <attributeDefinition>95% KUD area estimation for locations where feeding occurred</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>meter squares</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">14.1224855</minimum>
+                  <maximum exclusive="false">1430.77712</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>feeding_pathway_length</attributeName>
+          <attributeDefinition>Total pathway length of  successive points for locations where feeding occurred</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>meters</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">15.4441493</minimum>
+                  <maximum exclusive="false">484.066066</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+      <numberOfRecords>56</numberOfRecords>
+    </dataTable>
+    <dataTable>
+      <entityName>Fish Information Chlorurus Data</entityName>
+      <entityDescription>Total length and phase for each individual in our study</entityDescription>
+      <physical>
+        <objectName>Fish_Information_Chlorurus_Data_2014.csv</objectName>
+        <size unit="bytes">1088</size>
+        <authentication method="MD5">49d0e2e7891781d8b63af4701c5ada08</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+              <quoteCharacter>"</quoteCharacter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>fish_id</attributeName>
+          <attributeDefinition>Unique, two letter, ID code to identify individual fish</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Unique, two letter, ID code to identify individual fish</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>species</attributeName>
+          <attributeDefinition>Species code,  first two letters of the genus name and first five letters of the species name</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>CH.MICRO</code>
+                    <definition>Chlorurus Michrorhinos</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>CH.SPIL</code>
+                    <definition>Chlorurus spilurus</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>species_full_name</attributeName>
+          <attributeDefinition>Species full latin name</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Species full latin name</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>site</attributeName>
+          <attributeDefinition>Location at which that individual fish was found</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Location at which that individual fish was found</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>phase</attributeName>
+          <attributeDefinition>Color phase for individual fish  </attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>TP</code>
+                    <definition>Terminal Phase</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>total_length</attributeName>
+          <attributeDefinition>Fish total Length</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+                <bounds>
+                  <minimum exclusive="false">26</minimum>
+                  <maximum exclusive="false">66</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+      <numberOfRecords>20</numberOfRecords>
+    </dataTable>
+  </dataset>
+  <additionalMetadata>
+    <metadata>
+      <unitList>
+        <unit id="minutes" name="minutes" parentSI="" unitType="">
+          <description/>
+        </unit>
+        <unit id="meter squares" name="meter squares" parentSI="" unitType="">
+          <description/>
+        </unit>
+        <unit id="meters" name="meters" parentSI="" unitType="">
+          <description/>
+        </unit>
+        <unit id="centimeter" name="centimeter" parentSI="meter" unitType="">
+          <description>.01 meters</description>
+        </unit>
+      </unitList>
+    </metadata>
+  </additionalMetadata>
+</eml:eml>
