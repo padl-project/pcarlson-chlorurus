@@ -46,7 +46,7 @@ fish_meta_raw <- read_csv(here::here(paste0(raw_data_path, "Fish_Metadata.csv"))
 - Activity look up is the metadata for the categorical variables under the Activity column.
 - Fish metadata is the look-up table with all the information of each fish id
 
-## Renaming columsn
+## Renaming columns
 Removing unites from columns name
 
 ```{r}
